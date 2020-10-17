@@ -1,1 +1,7 @@
 https://github.com/FabrizioCafolla/lumen-microservice
+https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb --- how to backup and restore database in mysql
+# Backup
+docker exec CONTAINER /usr/bin/mysqldump -u root --password=root DATABASE > backup.sql
+
+# Restore
+cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE
