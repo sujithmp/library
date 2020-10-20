@@ -12,3 +12,6 @@ https://medium.com/@kimcodeashian/simple-css-solutions-how-to-resize-images-with
 
 Read About Setting up Microservices in aws using aws-api-gateway
 https://aws.amazon.com/blogs/compute/using-amazon-api-gateway-with-microservices-deployed-on-amazon-ecs/
+
+Things to be considered before using docker in production
+https://medium.com/@OPTASY.com/should-i-use-docker-in-production-environment-is-it-safe-3c6f7907ca62
