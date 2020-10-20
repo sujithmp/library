@@ -9,3 +9,6 @@ cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root
 
 Simple css solution: how to fit images of different size to set containers.
 https://medium.com/@kimcodeashian/simple-css-solutions-how-to-resize-images-with-different-dimensions-without-cropping-eb744e93246d
+
+Read About Setting up Microservices in aws using aws-api-gateway
+https://aws.amazon.com/blogs/compute/using-amazon-api-gateway-with-microservices-deployed-on-amazon-ecs/
