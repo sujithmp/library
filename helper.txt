@@ -15,3 +15,4 @@ https://aws.amazon.com/blogs/compute/using-amazon-api-gateway-with-microservices
 
 Things to be considered before using docker in production
 https://medium.com/@OPTASY.com/should-i-use-docker-in-production-environment-is-it-safe-3c6f7907ca62
+Created an AWS account as the first step. This is a free account, so my concern is about how much of the service I can use. I should get to know the boundaries of these services so that I can maintain under free tier service.
