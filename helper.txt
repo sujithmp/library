@@ -24,3 +24,6 @@ https://dockercommunity.slack.com/join/shared_invite/zt-i24r922e-vbmqVacmOFByvPH
 Doubts on docker
 I have 2 containers www (for apache+php) and mysql. Everything works fine but after restart, mysql each time have new IP. Which is the right way to solve this problem?
 are you linking your mysql container to your www container? If so, use "env" for your CMD so you can use the variable which holds the IP for your MYSQL container
+
+Docker cheat-sheets
+https://github.com/wsargent/docker-cheat-sheet/blob/master
