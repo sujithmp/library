@@ -43,5 +43,8 @@ or use nginx as your router
 I prefer to use nginx as my router, gives me more control over what i expose and a clean place to get at the logs
 you run nginx on the host system and set up proxyforward rules in it’s config that forward things like 0.0.0.0:80/app1 to 172.17.0.2:8080 and 0.0.0.0:80/app2 to 172.17.0.3:8080
 
+I just can't mount the source code on my OSX to the container. Anyone?
+you share the volume with the -v flag: -v /Users/me/sharethis:/containerpath
+
 Docker lab
 https://training.play-with-docker.com/beginner-linux/
