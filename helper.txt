@@ -32,8 +32,16 @@ Improve understanding of git interactively
 https://learngitbranching.js.org/
 
 Remote accessing a docker container
+
+so how do you access different internal IPs, from outside of the container?
+
+do i have to use a SOCKS proxy ... or DNS config? are those the only ways? (some kind of additional forwarding)
 http://lalyos.github.io/blog/2013/10/06/access-docker-containers-via-internal-ip/
 Can use ssh with socks proxy
+you have to expose what you want on unique ports and use --ip-forward=true
+or use nginx as your router
+I prefer to use nginx as my router, gives me more control over what i expose and a clean place to get at the logs
+you run nginx on the host system and set up proxyforward rules in it’s config that forward things like 0.0.0.0:80/app1 to 172.17.0.2:8080 and 0.0.0.0:80/app2 to 172.17.0.3:8080
 
 Docker lab
 https://training.play-with-docker.com/beginner-linux/
