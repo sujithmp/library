@@ -31,5 +31,9 @@ https://github.com/wsargent/docker-cheat-sheet/blob/master
 Improve understanding of git interactively
 https://learngitbranching.js.org/
 
+Remote accessing a docker container
+http://lalyos.github.io/blog/2013/10/06/access-docker-containers-via-internal-ip/
+Can use ssh with socks proxy
+
 Docker lab
 https://training.play-with-docker.com/beginner-linux/
