@@ -28,3 +28,9 @@
   docker run -d abhije***/postgres-data 
   Refer this link:
   https://stackoverflow.com/questions/29600369/starting-and-populating-a-postgres-container-in-docker
+  
+  Alternatively, you can just mount a volume to /docker-entrypoint-initdb.d/ that contains all your DDL scripts.
+  You can put in *.sh, *.sql, or *.sql.gz files and it will take care of executing those on start-up.
+
+  e.g. (assuming you have your scripts in /tmp/my_scripts)
+  docker run -v /tmp/my_scripts:/docker-entrypoint-initdb.d postgres
