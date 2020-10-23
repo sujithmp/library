@@ -16,3 +16,27 @@ This physical mount point will have the code repo. Not sure how I feel about tha
 Still early in my docker days so don't have production stuff yet, 
 pointing a docker container to use a volume in /opt/php/repo shouldn't be an issue, 
 just have to double check the uid mappings if you also want to manage that on the host.
+
+
+Docker stop
+https://www.ctl.io/developers/blog/post/gracefully-stopping-docker-containers/
+Things would be easy if you simply started a container and it ran forever, 
+but there's a good chance that your application will need to be stopped and 
+restarted at some point to facilitate an upgrade or a migration to another host.
+For those times when you need to stop a running container, 
+it would be preferable if the process could shutdown smoothly instead of abruptly disconnecting users and corrupting files.
+
+When you issue a docker stop command Docker will first ask nicely for the process to stop and if it doesn't comply within 10 seconds
+it will forcibly kill it. 
+If you've ever issued a docker stop and had to wait 10 seconds for the command to return you've seen this in action
+
+The docker stop command attempts to stop a running container first by sending a 
+SIGTERM signal to the root process (PID 1) in the container. If the process hasn't
+exited within the timeout period a SIGKILL signal will be sent.
+
+Whereas a process can choose to ignore a SIGTERM, a SIGKILL goes straight to the kernel which will terminate the process.
+The process never even gets to see the signal.
+
+When using docker stop the only thing you can control is the number of seconds that the Docker daemon will wait before sending the SIGKILL:
+
+docker stop ----time=30 foo
