@@ -1,0 +1,216 @@
+thanks, appreciate it
+I'm both new to docker and aws
+Huge headach here with AWS so far.
+Let me first explain my intent:
+1) I want to run a Node.js blog in a container via AWS cheaply.
+2) I saw that you can get 1 year of EC2 for free via the "Free Tier" aws.amazon.com/ec2/pricing
+more on the Free Tier aws.amazon.com/free
+ 
+code_monk
+code_monk
+hello @WTF. It can be daunting at first
+ 
+WTF
+WTF
+The "Learn More" link in that previous link leads you to aws.amazon.com/ec2
+Then says you can search the Amazon Marketplace: "Quickly get started with Amazon EC2 by visiting AWS Marketplace to choose preconfigured software on Amazon Machine Images (AMIs). You can quickly deploy this software to EC2 via 1-Click launch or with the EC2 console."
+sorry yea let me finish a little
+just to you know where I've come to this point
+ 
+code_monk
+code_monk
+ok, i think I understand
+ 
+WTF
+WTF
+on aws.amazon.com/free there's another option for EC2 Container Registry
+ 
+code_monk
+code_monk
+My suggestion for you is to not bother with Docker. Just host your node app directly on an EC2 Micro Instance
+The reason is, you are only concerned with one app, and for that one app you'll need a host.
+Docker is overkill
+ 
+WTF
+WTF
+4:18 AM
+I know, I want to learn docker is why
+I had used it a bit in my previous job and want to know it well
+ 
+code_monk
+code_monk
+ah, ok then!
+ 
+WTF
+WTF
+so ok sorry now I remember where I started
+console.aws.amazon.com/ecs/home?region=us-east-1#/getStarted
+I ran through this wizard to create my EC2 instance
+then spent days and did stuff like install docker after ssh'd into the instance
+pulled an image ubuntu:xenial into my AWS registry
+and now I'm like ok, how the hell do I create a container off my image that's in my registry in order to run my blog
+and when I got to the Container Instances docs for EC2, I'm confused as hell because it tells me to create a new EC2 Instance!@
+do they just stop there and not tell you how to start creating actual docker containers that run IN your EC2 Instance (Docker Host)?
+oh yea there's this docs.aws.amazon.com/AmazonECS/latest/developerguide/…
+ 
+code_monk
+code_monk
+ok, cool. I think I understand. So, first of all, a registry is a public place for docker images, and docker images are the dormant versions of containers.
+it's like npm for node
+so you've SSH'd into an instance, and now you're wondering how to spin up a container?
+and I have one final question for you. Do you want to go with a complex setup like ECS, or a simple setup like EC2?
+ 
+WTF
+WTF
+so yes I want to spin up a container inside my host. On your second question, that's also a point of confusion, ECS vs. EC2
+ 
+code_monk
+code_monk
+ECS is designed for clusters of hosts, and that doesn't fit your need, so let's just say you want a plain old Micro Instance, and you want to run docker on it. So your stack will be:
+Micro Instance -> Docker -> node.js
+ 
+WTF
+WTF
+4:27 AM
+ok, so confusing because the docs said "Amazon EC2 Container Service (ECS)"...so I took that as EC2 === ECS
+ok
+ 
+code_monk
+code_monk
+I know. They made some unfortunate naming decisions when they rolled out that service
+ 
+WTF
+WTF
+so with that model, can I still use the EC2 instance I created?
+ 
+code_monk
+code_monk
+absolutely. so SSH in, and then run sudo docker --version
+ 
+WTF
+WTF
+yea, ok I have docker installled there alrady
+and have been working with docker on there a lot
+just haven't created any containers yet
+docker service is running on my EC2 micro instance
+ 
+code_monk
+code_monk
+ok, great. So you create a container anytime you run sudo docker build . in a directory with a Dockerfile
+ 
+WTF
+WTF
+4:29 AM
+Docker version 1.9.1, build a34a1d5/1.9.1
+ok so I need to create a docker file then?
+which tells it what image to use
+ 
+code_monk
+code_monk
+In this model, you don't need to worry about pushing your docker images up to a registry
+ 
+WTF
+WTF
+which that image lies in my AWS registry
+oh
+so I'll just use the docker hub only?
+ok so using the AWS registry is only valuable if I'm running a cluster of hosts?
+ 
+code_monk
+code_monk
+You will use Docker Hub to pull down images. For instance, if you want a node app, you'll probably create a Dockerfile that depends on the node container
+ 
+WTF
+WTF
+gotcha
+there's an image on docker hub I pulled last time called ubuntu:xenial
+so I assume I can create a container off that image
+and then somehow ssh into my container and pull down my node.js code from github
+do I have that all right?
+ 
+code_monk
+code_monk
+Close, but not quite
+ 
+WTF
+WTF
+4:33 AM
+(and basically I can ignore all this documentation here about pulling an image docs.aws.amazon.com/AmazonECR/latest/userguide/…)
+ 
+code_monk
+code_monk
+Yeah. For now i would just pull from docker hub because the docker client is already set up to do that
+and all the good images are on Docker Hub
+ 
+WTF
+WTF
+ok so simply the docker pull ubuntu:trusty
+gotcha
+ 
+code_monk
+code_monk
+you should create a folder to contain your app and build in normally, running git commands, and adding source code staight on the machine
+ 
+WTF
+WTF
+ok so pretty much I'm not going to use ECS (all the docs) at all on AWS
+Ok so containers share the memory and hard disk on my host right?
+and containers isolate a portion of that to run for my app
+ 
+code_monk
+code_monk
+I'd say no. Because Docker is beatifully simple, once you have that AHA moment. But ECS is a huge and complicated sysytem on top of it
+yes!
+ 
+WTF
+WTF
+4:35 AM
+ok
+so on my host, I'd just create app folders
+ 
+code_monk
+code_monk
+with a Dockerfile at the root
+ 
+WTF
+WTF
+create a dockerfile and use that to create a container and somehow my container knows to also run the code in that folder that lies on my host?
+ 
+code_monk
+code_monk
+yes. It knows that because of what you put on the Dockerfile. There are some basic commands. The Most common will be RUN and COPY.
+ 
+WTF
+WTF
+right docs.docker.com/engine/reference/run
+ 
+code_monk
+code_monk
+COPY will copy files from your folder into your container.
+ 
+WTF
+WTF
+4:37 AM
+oh ok
+ 
+code_monk
+code_monk
+RUN will execulte commands like RUN apt-get install nodejs
+ 
+WTF
+WTF
+and so my container has a seperate folder for itself too? and the copied files go into the container's own file system
+ 
+code_monk
+code_monk
+yes. Your container has a complete folder system with /usr/bin /home /dev /var/ and all the rest
+yes. docker build reads the Dockerfile, and executes the commands, building your container. When it's building, it thinks of the folder it's running from as the "build context"
+ 
+WTF
+WTF
+so when I specify the image for my container, such as ubuntu:xenial, that means I've pulled that container from docker hub, and when I create that container, it'll look at that local image on my host, and run the container as if it's a virtual server (copy of that image basically?)?
+ok
+ 
+code_monk
+code_monk
+exactly
