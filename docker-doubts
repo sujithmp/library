@@ -1,0 +1,9 @@
+i have a dockerfile defining a node app on centos
+and another container with mongo that is linked in
+now i'm trying to figure out how to connect nginx into that..
+
+So you want to have nginx i.e load balance between these tow?
+You can have nginx as seprate container, nginx has docker image published on docker hub you can use that. 
+Once you have exposed port nginx can connect to the docker container with hostname of docker
+and if nginx is outside docker in that case you need to connect to those docker container with hostname 
+where those containers are deployed and yes port has to published.
