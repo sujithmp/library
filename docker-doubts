@@ -7,3 +7,12 @@ You can have nginx as seprate container, nginx has docker image published on doc
 Once you have exposed port nginx can connect to the docker container with hostname of docker
 and if nginx is outside docker in that case you need to connect to those docker container with hostname 
 where those containers are deployed and yes port has to published.
+
+
+do you have any Docker apps in production? Debating how to handle storage. 
+Teammate has an idea to have a physical server (not docker) mount point of /opt/php/repo and have the docker container mount this.
+This physical mount point will have the code repo. Not sure how I feel about that yet
+
+Still early in my docker days so don't have production stuff yet, 
+pointing a docker container to use a volume in /opt/php/repo shouldn't be an issue, 
+just have to double check the uid mappings if you also want to manage that on the host.
