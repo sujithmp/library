@@ -1,0 +1,28 @@
+  How do I import data into my postgresql docker container?
+
+  Create a dockerfile as shown below, then the docker-entrypoint-initdb.d script
+  Dockerfile
+
+  FROM postgres:9.5
+
+  RUN mkdir -p /tmp/psql_data/
+
+  COPY db/structure.sql /tmp/psql_data/
+  COPY scripts/init_docker_postgres.sh /docker-entrypoint-initdb.d/
+  
+  
+  #!/bin/bash
+
+  DB_DUMP_LOCATION="/tmp/psql_data/structure.sql"
+
+  echo "*** CREATING DATABASE ***"
+
+  psql -U postgres < "$DB_DUMP_LOCATION";
+
+  echo "*** DATABASE CREATED! ***"
+  
+  and then you can build your image as
+
+  docker build -t abhije***/postgres-data .
+
+  docker run -d abhije***/postgres-data 
