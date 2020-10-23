@@ -26,3 +26,5 @@
   docker build -t abhije***/postgres-data .
 
   docker run -d abhije***/postgres-data 
+  Refer this link:
+  https://stackoverflow.com/questions/29600369/starting-and-populating-a-postgres-container-in-docker
