@@ -40,3 +40,6 @@ The process never even gets to see the signal.
 When using docker stop the only thing you can control is the number of seconds that the Docker daemon will wait before sending the SIGKILL:
 
 docker stop ----time=30 foo
+
+Docker login using a file
+https://stackoverflow.com/questions/51489359/docker-using-password-via-the-cli-is-insecure-use-password-stdin
