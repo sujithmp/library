@@ -1,0 +1,2 @@
+Create a nginx docker file and push into AWS registry
+https://medium.com/hackernoon/pushing-a-docker-image-to-the-ec2-container-registry-e7e00297fc20
