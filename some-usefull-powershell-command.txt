@@ -1,0 +1,7 @@
+Zip a file using powershell
+------------------------------
+Compress-Archive -LiteralPath <PathToFolder> -DestinationPath <PathToDestination>
+
+Unzip a file using powershell
+------------------------------
+Expand-Archive -LiteralPath <PathToZipFile> -DestinationPath <PathToDestination>
