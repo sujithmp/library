@@ -1,5 +1,8 @@
   How do I import data into my postgresql docker container?
 
+  Please refer below link for successfull way of doing database export and import using docker container
+  https://stackoverflow.com/questions/24718706/backup-restore-a-dockerized-postgresql-database#:~:text=Backup%20Database,sql
+
   Create a dockerfile as shown below, then the docker-entrypoint-initdb.d script
   Dockerfile
 
