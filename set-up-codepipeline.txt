@@ -5,4 +5,6 @@ Set up a repository in codecommit
    Normally this includes your vendor folder or node_modules directories and the .env files where the environment variables 
    are configured which may include secret datas.
 Here I have already created a repository, now I will pull the repository  and make some changes.   
-   
+   - I cloned the project to my system.
+      - While cloning git asked for username and password.
+       - So I logged into the aws console and navigate to iam user and generated a https access key for the key.
