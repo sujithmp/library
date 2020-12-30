@@ -1,0 +1,8 @@
+How to set up codepipe line for your application?
+Set up a repository in codecommit
+ - push your application source code into the  repository. In your case, a simple lumen application code.
+   Before that ensure that the required file types has been ignored in the git.
+   Normally this includes your vendor folder or node_modules directories and the .env files where the environment variables 
+   are configured which may include secret datas.
+Here I have already created a repository, now I will pull the repository  and make some changes.   
+   
