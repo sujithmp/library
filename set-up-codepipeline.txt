@@ -7,4 +7,11 @@ Set up a repository in codecommit
 Here I have already created a repository, now I will pull the repository  and make some changes.   
    - I cloned the project to my system.
       - While cloning git asked for username and password.
-       - So I logged into the aws console and navigate to iam user and generated a https access key for the key.
+       - So I logged into the aws console and navigate to iam user and generated a https access key for accessing 	the repository.
+       - Then copied the repository url from the codecommit repositories and started cloning. You have to provide 
+         the user credential to clone the repository.
+   - Once the repository is cloned add the buildspec.yml file in the repository and commited and pushed into
+   	 master.
+   - 	 	      
+
+
