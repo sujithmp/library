@@ -43,3 +43,8 @@ docker stop ----time=30 foo
 
 Docker login using a file
 https://stackoverflow.com/questions/51489359/docker-using-password-via-the-cli-is-insecure-use-password-stdin
+1) How do we automate add more instances to the ecs cluster?
+2) Services are running but the target group health status is unhealthy and shows health check failed why?
+3) While registering new instances to target groups should we need to provide the unique port number or use the default one?
+4) Do the ecs cluster use the number of instances mentioned while creating cluster for the whole number of services?
+Means if the number of instances mentioned is 2 then it will only use two instances allover the services? Or when we need to add more instances while adding new services or it will automatically spin up two instances?
