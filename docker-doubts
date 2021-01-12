@@ -48,3 +48,6 @@ https://stackoverflow.com/questions/51489359/docker-using-password-via-the-cli-i
 3) While registering new instances to target groups should we need to provide the unique port number or use the default one?
 4) Do the ecs cluster use the number of instances mentioned while creating cluster for the whole number of services?
 Means if the number of instances mentioned is 2 then it will only use two instances allover the services? Or when we need to add more instances while adding new services or it will automatically spin up two instances?
+
+ECS understand
+https://www.youtube.com/watch?v=46mFdtpy3NQ
