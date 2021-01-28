@@ -1,3 +1,4 @@
 http://ianmiell.github.io/git-101-tutorial/
 https://stackoverflow.com/questions/6948573/git-format-patch-viewer
 https://gist.github.com/patkujawa-wf/9960173#:~:text=git%20diff%20patch%20between%20branches.md%20If%20you%20want,the%20output%20redirect%3A%20git%20diff%20master..branch-name%20%3E%20branch-name.patch
+https://blog.tomasfejfar.cz/git-how-to-make-master-empty/
