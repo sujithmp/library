@@ -1,3 +1,13 @@
 https://medium.com/@jeffreyrussom/react-continuous-deployments-with-aws-codepipeline-f5034129ff0e
 
 https://medium.com/dev-genius/deploy-a-reactjs-application-to-aws-ec2-instance-using-aws-codepipeline-3df5e4157028
+
+https://www.aurigait.com/continuous-deployment-of-react-app-to-aws-ec2-with-bitbucket-pipelines/
+
+https://www.freecodecamp.org/news/production-fullstack-react-express/
+
+https://k21academy.com/amazon-web-services/aws-devops/deploy-web-application-on-aws-using-codepipeline/
+
+https://gist.github.com/sambreen27
+
+https://medium.com/swlh/setup-a-ci-cd-pipeline-to-automate-react-app-deployment-on-aws-ec2-82bd0c194f77
