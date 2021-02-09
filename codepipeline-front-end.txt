@@ -13,3 +13,5 @@ https://gist.github.com/sambreen27
 https://medium.com/swlh/setup-a-ci-cd-pipeline-to-automate-react-app-deployment-on-aws-ec2-82bd0c194f77
 
 https://aws.amazon.com/getting-started/projects/set-up-ci-cd-pipeline/
+
+http://www.bitsumma.com/2018/11/07/running-production-and-deployment-react-apps-on-the-same-ec2-host/
