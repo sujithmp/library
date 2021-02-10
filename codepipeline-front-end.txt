@@ -19,3 +19,6 @@ http://www.bitsumma.com/2018/11/07/running-production-and-deployment-react-apps-
 Adding ci/cd pipeline with aws ec2 for react app
 
 https://www.youtube.com/watch?v=zkNdHv1iMgY
+
+
+https://www.youtube.com/watch?v=rE8mJ1OYjmM
