@@ -3,3 +3,6 @@ AWS  web service to speed up the content delivery such as .html,.js,images etc.
 Speeds up the distribution of static and dynamic website contents such as .html, .css, .js and image files.
 CloudFront delivers a content request which serve by our cloudfront through datacentres called edge locations.
 Edge locations are world wide interconnected data centres. 
+
+
+CloudFront speeds up the distribution of web content by routing each user request thhrough  aws backbone networks to the edge locations where the content can be best served.
