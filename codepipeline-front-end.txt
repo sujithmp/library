@@ -22,3 +22,9 @@ https://www.youtube.com/watch?v=zkNdHv1iMgY
 
 
 https://www.youtube.com/watch?v=rE8mJ1OYjmM
+
+
+=====================
+s3 bucket hosting
+
+https://via.studio/journal/hosting-a-reactjs-app-with-routing-on-aws-s3
