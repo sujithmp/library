@@ -5,3 +5,23 @@ https://blog.tomasfejfar.cz/git-how-to-make-master-empty/
 https://stackabuse.com/git-revert-to-a-previous-commit/
 
 https://tomkadwill.com/git-reset-or-git-pull
+
+
+Git advanced commands
+=====================
+
+Git is a rare piece of software, something like it would be never seen in the near future.
+In programming world it's hard to get time for properly implement anything in the first lifecycle.
+Sometimes people will be stuck with complicated stuffs. And what if you are not comfortable with the enviroment itself, it will again add up the complexity of your development. 
+I have a similar experience with git. One of my teammate merged the development code to the master repository before testing by mistake.
+
+I reverted the git commits in master branch to one of the previous commit which was stable and tested previously. Luckily I had done some researches in
+git revert and git reset just before the incident. So it was greatly helpful to me. So I thought of sharing my experience here with some advanced git commands that will make
+git environment more friendly.
+
+The below reference has been a great useful to me on doing this.
+https://itnext.io/advanced-git-features-you-didnt-know-you-needed-ed8455c45495
+
+
+
+
