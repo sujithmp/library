@@ -22,6 +22,11 @@ git environment more friendly.
 The below reference has been a great useful to me on doing this.
 https://itnext.io/advanced-git-features-you-didnt-know-you-needed-ed8455c45495
 
+Git log
+========
+
+To start with, git log. `git log` when executed without any flag will give all the commit history in a branch.
+Why dont't we add some graphics to git! Let's add some graphic! Run the command  `git log --graphic`
 
 
 
