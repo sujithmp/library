@@ -28,3 +28,7 @@ https://www.youtube.com/watch?v=rE8mJ1OYjmM
 s3 bucket hosting
 
 https://via.studio/journal/hosting-a-reactjs-app-with-routing-on-aws-s3
+
+I never thought of hosting website using s3 bucket, eventhough I knew it can be used for  storage purposes. But my latest researches in AWS regarding services, in someway helped my mind to guess something like this would have been possible. Even as the service  says simple storage service, actually we can store our application files in s3 bucket. And can utilize these files to serve as statcic website file. There are  quite some advantages also, otherwise to do the same we might need to run an EC2 instance, which would definitely charge some amount for the usage. While the s3 bucket storage upto a certain limit is free of  charge. 
+
+Setting up this infrastructure is kind of cool thing!
