@@ -5,3 +5,8 @@ Compress-Archive -LiteralPath <PathToFolder> -DestinationPath <PathToDestination
 Unzip a file using powershell
 ------------------------------
 Expand-Archive -LiteralPath <PathToZipFile> -DestinationPath <PathToDestination>
+
+The above commands, I don't know whether its Dejavu or not! It has been 3 months  or more as I still remember these commands I noted down thinking It would be helpful one day! I suppose I had been right. Might have been some luck,I find these commands useful. May be quite so I have to say. Recently for atleast half an month,perhaps a month I had been zipping and unzipping files frequently while deploying a react application hosted in EC2 instance on AWS. And this came unexpectedly, and I realize now all the things we are doing will have some consequences! May be nothing is coincidence.
+
+Yesterday unexpectedly I was going through the docker official documentation for logs and diagnosing issues regarding docker client not  running in system. yes I remember I had been checking for command to start the docker desktop via terminal. Eventhough I tried start docker command, it was not working as I expected, instead it was in a way success that it was flashing the docker terminal and moments later it terminated by itself. I don't know the reason why it is happening! Same effect I have seen with git bash while trying to start through powershell. And with some determination I had started to find any means I could start the docker desktop application through terminal, I didn't know I would come up with this command. The command I am talking about is `netstat -aon`.
+
