@@ -1,3 +1,7 @@
 https://stackoverflow.com/questions/35645799/ssh-to-aws-rds-postgres-instance
 https://css-tricks.com/position-sticky-and-table-headers/
 https://jasonwatmore.com/post/2019/11/18/react-nodejs-on-aws-how-to-deploy-a-mern-stack-app-to-amazon-ec2
+
+
+https://stackoverflow.com/questions/33038651/pg-dump-serial-datatype-issues
+pg_dump -U someusername yourdbname -n tmpdump -F p --inserts | less
