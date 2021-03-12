@@ -1,1 +1,3 @@
 https://stackoverflow.com/questions/33038651/pg-dump-serial-datatype-issues
+
+https://www.postgresql.org/docs/9.4/app-pgdump.html
