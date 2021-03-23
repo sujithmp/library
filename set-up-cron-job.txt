@@ -1,0 +1,2 @@
+Running cron job is quite a bit difficult task. Especially when no logs or error messages. 
+When I started to configure a cron job using laravel scheduler I came across several unexpected errors.
