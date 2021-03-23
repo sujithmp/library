@@ -26,7 +26,8 @@ Git log
 ========
 
 To start with, git log. `git log` when executed without any flag will give all the commit history in a branch.
-Why dont't we add some graphics to git! Let's add some graphic! Run the command  `git log --graphic`
-
+Why dont't we add some graphics to git! Let's add some graphic! Run the command  `git log --graph`
+The above command will output the commit graph, in which asterisk points the commits and the lines `|` are yielded up on new commits are added on after the branching 
+point. Similar ones will be created when commiting on the right branch.
 
 
