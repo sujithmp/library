@@ -1,2 +1,7 @@
 Running cron job is quite a bit difficult task. Especially when no logs or error messages. 
 When I started to configure a cron job using laravel scheduler I came across several unexpected errors.
+I followed a youtube tutorial as a starting point. Once I watched the video carefully jumped to the implementation part.
+Since I was using lumen my ultimate aim is to run the command `php artisan schedule:run` on the server.
+
+The complicated part is setting up the cron job inside the php-fpm docker container. 
+I know that if its working inside the container then it will work in the server also.
