@@ -5,3 +5,9 @@ Since I was using lumen my ultimate aim is to run the command `php artisan sched
 
 The complicated part is setting up the cron job inside the php-fpm docker container. 
 I know that if its working inside the container then it will work in the server also.
+
+Okay, my docker containers are running, specifically the php-fpm container. I have already created a startup_script.sh file which will be run each time the container is start up.
+You can use the command  `docker ps`  to check for running containers. We need to run cron in this container, so how will we start the cron job? I started searching google. Come up with something like `crond -f`. I am using Dockerfile to create the php container for my lumen application, and php-fpm 7.3 alpine as the base image for the container.
+
+Added the above said command in the startup_script.sh file as one of the command. I rebuild the container and tried `docker-compose exec php ps aux ` this command will display all the running process in the php container and the owner of the process. Here php is the name of my container. 
+php-fpm is running as www and ps aux is also showing as running in the list. But nothing related to cron is there. Why isn't cron running? At this point I doubted whether we need to install cron the container. I had got a strong reason to think as might be because the cron package might not be installed in the linux alpine containers. As it linux alpine versions are light weight. Because most of the packages that will be available in normal version of linux will not be installed in the alpine version. So what i did was just entered into the php docker container and typed crond and executed. As far as I understood the terminal, it should display the possible available commands. otherwise  it will return with an error message not found exception. Exactly it gave me the later. Realizing cron package is not installed.
