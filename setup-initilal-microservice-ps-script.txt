@@ -1,0 +1,76 @@
+
+echo "Starting boot up script =>"
+#rm -r ./src
+$pattern = "";
+For($i=0;$i-le10;$i++){
+	#$pattern ="";
+	For($j=$i;$j-le$i+1;$j++){
+		$pattern  = "${pattern}=";
+	}
+	echo "${pattern}>";
+}
+
+
+echo "Creating docker-compose yml"
+$items = "";
+if(	Get-Childitem -Path ~/dev | findstr  "docker-compose.yml"  ){
+	echo "docker-compose file already exist";
+	echo "Removing file ============>";
+	rm docker-compose.yml
+	New-item docker-compose.yml
+	$items = Get-Childitem -Path ~/dev
+	#echo "${items}"
+	if( ( ($items | findstr "sales_order") | Measure-Object ).Count-gt 0  ){
+		rm -r sales_order*
+	}
+	if(( ($items | findstr "master") | Measure-Object ).Count-gt 0){
+		
+		rm -r master*
+	}
+	if(( ($items | findstr "order_entry") | Measure-Object ).Count-gt 0  ){
+		rm -r order_entry*
+	}
+
+	echo "========================== making the directory ================================================="
+	mkdir sales_order	
+	mkdir master	
+	mkdir order_entry
+	cd ~/dev/sales_order
+	mkdir src
+	cd ../
+	cd ~/dev/order_entry
+	mkdir src
+	cd ../
+	cd ~/dev/master
+	mkdir src
+	
+	git clone https://github.com/laravel/lumen.git ./src
+	cd ../order_entry
+	git clone https://github.com/laravel/lumen.git ./src
+	cd ../sales_order
+	git clone https://github.com/laravel/lumen.git ./src
+	cd ../
+	clear
+	ls ~/dev/master/src
+	ls ~/dev/sales_order/src
+	ls ~/dev/order_entry/src
+	#start-service 'com.docker.service'
+	echo "Testing docker ========================================================================>"
+	docker run hello-world
+	cd ./master/src
+	docker run --rm -v ${PWD}:/app composer install
+	cd ../../
+	cd ./sales_order/src
+	docker run --rm -v ${PWD}:/app composer install
+	cd ../../order_entry/src
+	docker run --rm -v ${PWD}:/app composer install
+	cd ../../
+
+
+} else {
+	New-item docker-compose.yml
+	mkdir sales_order	
+	mkdir master	
+	mkdir order_entry	
+}
+ls ~/dev
