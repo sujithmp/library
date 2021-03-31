@@ -2,3 +2,19 @@ https://www.youtube.com/watch?v=oyWOkGPgaM0
 https://www.youtube.com/watch?v=Gr2yTSsVSqg
 https://www.youtube.com/watch?v=In3zbaJ7svI
 https://www.youtube.com/watch?v=lCWy1sXU79E
+
+
+Create cluster
+-------------------------------------------
+Login to aws console, search for Elastic container service, in the newly opened page select Amazon Cluster Service.
+
+It will open the Amazon Cluster Service console, here click on create cluster. In the next page fill all the required fields.
+
+Select the cluster  template, from here you can go with EC2 linux with networking  or EC2 windows with networking or else can go with Networking only option. In the later option we need not bother about networking it's fully managed by AWS itself. We need to just specify the number of containers required for our service.
+
+In the other two option only difference will be the type of instance we are using. Either you can use windows instance or linux instance.
+These two options are self managed. That means partially managed by AWS and the other half rest with user.
+
+Here for our scenario we will use EC2 linux with networking template. Once the template is selected click on next button and continue to configure cluster window. Here we need to enter the cluster name followed by the type of instance allocation. By default it will be selected `Provisional Model` as `On-Demand Instance`.   
+
+
