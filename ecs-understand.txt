@@ -17,4 +17,4 @@ These two options are self managed. That means partially managed by AWS and the 
 
 Here for our scenario we will use EC2 linux with networking template. Once the template is selected click on next button and continue to configure cluster window. Here we need to enter the cluster name followed by the type of instance allocation. By default it will be selected `Provisional Model` as `On-Demand Instance`.   
 
-
+https://docs.aws.amazon.com/AmazonECS/latest/developerguide/start_task_at_launch.html
