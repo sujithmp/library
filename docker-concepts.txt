@@ -1,0 +1,3 @@
+Adding a running container to a network
+
+https://docs.docker.com/engine/reference/commandline/network_create/#:~:text=Connect%20containers&text=If%20you%20want%20to%20add,container's%20IP%20address%20or%20name.
