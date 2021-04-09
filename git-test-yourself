@@ -30,4 +30,6 @@ Why dont't we add some graphics to git! Let's add some graphic! Run the command 
 The above command will output the commit graph, in which asterisk points the commits and the lines `|` are yielded up on new commits are added on after the branching 
 point. Similar ones will be created when commiting on the right branch.
 
+Github adding public key and private key
 
+https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
