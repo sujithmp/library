@@ -1,0 +1,1 @@
+https://docs.aws.amazon.com/AmazonECS/latest/userguide/example_task_definitions.html#example_task_definition-webserver
