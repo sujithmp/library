@@ -1,1 +1,6 @@
 https://stackoverflow.com/questions/25540711/docker-postgres-pgadmin-local-connection
+
+
+Set up a local dockerized container for pgadmin4
+
+https://blog.crunchydata.com/blog/easy-postgresql-10-and-pgadmin-4-setup-with-docker
