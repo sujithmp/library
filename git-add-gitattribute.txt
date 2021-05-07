@@ -1,0 +1,1 @@
+https://vianneyfaivre.com/tech/how-to-force-git-to-use-lf-instead-of-crlf
