@@ -15,7 +15,12 @@ Select the cluster  template, from here you can go with EC2 linux with networkin
 In the other two option only difference will be the type of instance we are using. Either you can use windows instance or linux instance.
 These two options are self managed. That means partially managed by AWS and the other half rest with user.
 
-Here for our scenario we will use EC2 linux with networking template. Once the template is selected click on next button and continue to configure cluster window. Here we need to enter the cluster name followed by the type of instance allocation. By default it will be selected `Provisional Model` as `On-Demand Instance`.   
+Here for our scenario we will use EC2 linux with networking template. Once the template is selected click on next button and continue to configure cluster window. 
+Here we need to enter the cluster name followed by the type of instance allocation. By default it will be selected `Provisional Model` as `On-Demand Instance`.
+
+Next we need to select the type of the instance. There are quite several families of the instance type available. For free tier accounts one can use t2 micro instance type, it's free of charge upto 750 hrs a month.
+
+
 
 https://docs.aws.amazon.com/AmazonECS/latest/developerguide/start_task_at_launch.html
 https://stackoverflow.com/questions/66911044/compare-string-value-against-array-of-strings-in-php-laravel
