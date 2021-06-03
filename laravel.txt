@@ -1,1 +1,5 @@
 https://www.doctrine-project.org/projects/doctrine-orm/en/2.8/cookbook/custom-mapping-types.html#custom-mapping-types
+
+https://medium.com/@melihovv/how-to-sanitize-input-data-in-declarative-manner-in-laravel-e4486068f751
+
+
