@@ -1,1 +1,9 @@
 composer install --ignore-platform-reqs
+
+https://stackoverflow.com/questions/32750250/tell-composer-to-use-different-php-version
+Root composer.json requires php ^7.3 but your php version (8.0.3) does not satisfy that requirement.
+"config": {
+    "platform": {
+        "php": "7.1.3"
+    }
+}
