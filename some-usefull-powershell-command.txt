@@ -10,3 +10,6 @@ The above commands, I don't know whether its Dejavu or not! It has been 3 months
 
 Yesterday unexpectedly I was going through the docker official documentation for logs and diagnosing issues regarding docker client not  running in system. yes I remember I had been checking for command to start the docker desktop via terminal. Eventhough I tried start docker command, it was not working as I expected, instead it was in a way success that it was flashing the docker terminal and moments later it terminated by itself. I don't know the reason why it is happening! Same effect I have seen with git bash while trying to start through powershell. And with some determination I had started to find any means I could start the docker desktop application through terminal, I didn't know I would come up with this command. The command I am talking about is `netstat -aon`.
 
+
+
+https://powershellexplained.com/2017-03-18-Powershell-reading-and-saving-data-to-files/
