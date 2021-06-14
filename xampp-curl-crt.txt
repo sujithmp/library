@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/55488982/failed-loading-cafile-stream-c-xampp-apache-bin-curl-ca-bundle-crt
