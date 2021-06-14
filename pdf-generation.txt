@@ -1,0 +1,54 @@
+<?php
+set_time_limit(120);
+require './aws-autoloader.php';
+
+require './Aws/S3/S3Client.php';
+require './Aws/Exception/AwsException.php';
+
+$s3 = new Aws\S3\S3Client([
+    'version' => 'latest',
+    'region' => 'us-east-1'
+]);
+
+?>
+<html><body>
+
+<?php 
+$response = $s3 ->listObjects(array('Bucket' =>"my-example-bucket"));
+
+
+$data = '<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Lorem Ipsum</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod laboriosam atque, consequuntur beatae fugiat in incidunt perspiciatis dolorem ipsum nam itaque animi nobis quam illum dolore. Nam nostrum maiores, ipsa.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vero veniam sed ullam commodi! Accusantium, officia vitae, adipisci mollitia, blanditiis voluptates accusamus nam atque repellendus laborum, ullam vel eligendi esse?</p>';
+
+foreach($response['Contents'] as $key => $value) {
+	
+	$image = '';
+	
+	$path = $value['Key'];
+	$image = "https://my-example-bucket.s3.amazonaws.com/$path";
+	$data.='<img src="'.$image.'" width="100">';
+	
+?>
+	
+<?php      		
+}
+$data.='</body>
+</html>';
+
+
+file_put_contents('C:\Users\Administrator\Demo\htdocs\test.html', $data);
+
+
+exec('C:\"Program Files"\wkhtmltopdf\bin\wkhtmltopdf ./test.html ./test.pdf> C:\Users\Administrator\Downloads\my.txt 2>&1');
+?>
+
+
+</body></html>
