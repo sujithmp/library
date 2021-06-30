@@ -33,3 +33,6 @@ point. Similar ones will be created when commiting on the right branch.
 Github adding public key and private key
 
 https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+How to rename the remote default branch name
+https://www.git-tower.com/learn/git/faq/git-rename-master-to-main/
