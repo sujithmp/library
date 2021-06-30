@@ -1,0 +1,3 @@
+How to point the nginx server running on localhost point to frontend application running on localhost:5000?
+
+https://www.digitalocean.com/community/questions/configure-nginx-for-nodejs-backend-and-react-frontend-app
