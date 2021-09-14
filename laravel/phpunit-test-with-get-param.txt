@@ -1,0 +1,5 @@
+https://stackoverflow.com/questions/47474554/laravel-phpunit-testing-get-with-parameters
+
+Laravel phpunit testing get with parameters
+To test query param with get using php unit test please follow below example
+$request = $this->call('GET', '/myController', ["test"=>"test"]);
