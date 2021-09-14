@@ -1,0 +1,4 @@
+$item = new Item;
+$table = $item->getTable();
+print_r($table);
+The above example shows how we can get the table name from the model instance.
