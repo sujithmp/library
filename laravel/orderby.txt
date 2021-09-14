@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/17006309/how-to-use-order-by-for-multiple-columns-in-laravel-4
+Please check this link to understand about how to use orderBy and it's advanced use, such as orderBy on multiple fields.
