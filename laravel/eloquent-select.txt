@@ -1,0 +1,2 @@
+https://laracasts.com/discuss/channels/laravel/query-builder-join-how-to-specify-columns-table-name
+Please check this link to see how to  select fields using query builder while join.
