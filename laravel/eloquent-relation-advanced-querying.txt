@@ -1,0 +1,10 @@
+https://hdtuto.com/article/laravel-eloquent-order-by-relation-column-example
+Please check this link to understand about advanced querying  condition for eloquent relations.
+For example:
+$posts = Post::get()->sortBy(function($query){
+
+ return $query->auther->name;
+
+})
+
+->all();
