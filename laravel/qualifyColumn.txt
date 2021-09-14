@@ -1,0 +1,1 @@
+https://laravel.com/api/5.8/Illuminate/Database/Eloquent/Builder.html#method_qualifyColumn
