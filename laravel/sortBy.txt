@@ -1,1 +1,18 @@
 https://github.com/laravel/ideas/issues/11
+
+Check the above link for sorting the data based on the fields. 
+
+$collection->sortBySorter(function($sorter) {
+    return $sorter
+
+        ->sortBy('field1')
+        ->sortBy('field1', SORT_NATURAL, 'asc')
+
+        ->sortBy('field2', 'desc')
+        ->sortByDesc('field2')
+
+        ->sortBy(function($data) {
+            return $data->field3;
+        });
+});
+As the above piece of code shows we can sort the data based on the fields.
