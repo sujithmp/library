@@ -8,3 +8,5 @@ $posts = Post::get()->sortBy(function($query){
 })
 
 ->all();
+https://stackoverflow.com/questions/48321076/perform-order-by-relationship-field-in-eloquent
+The above link is also useful.
