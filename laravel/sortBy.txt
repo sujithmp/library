@@ -1,0 +1,1 @@
+https://github.com/laravel/ideas/issues/11
