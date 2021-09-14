@@ -1,0 +1,3 @@
+ https://stackoverflow.com/questions/30942556/laravel-dynamic-where-clause-with-elouquent
+ Please check this link to see how to create a dynamic query in laravel using eloquent.
+ 
