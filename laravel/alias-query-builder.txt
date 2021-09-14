@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/17713730/how-to-alias-a-table-in-laravel-eloquent-queries-or-using-query-builder
+How to alias a table in Laravel Eloquent queries (or using Query Builder)?
