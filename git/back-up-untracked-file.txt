@@ -1,1 +1,2 @@
 for file in $(git ls-files --others --exclude-standard); do mkdir -p ../backup/$(dirname $file) ; mv $file ../backup/$file ; done
+https://stackoverflow.com/questions/48496920/git-move-all-untracked-files-and-folders-to-directory-out-of-git
