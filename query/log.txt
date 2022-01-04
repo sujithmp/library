@@ -1,0 +1,3 @@
+ \DB::enableQueryLog();
+ $lastQuery = \DB::getQueryLog();      
+ echo "<pre>",print_r($lastQuery);
