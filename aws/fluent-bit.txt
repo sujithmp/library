@@ -1,1 +1,4 @@
 Configure AWS Fluent bit for collecting log.
+I have already set up an ECR repository for the nginx and php fpm images. Built the application with lumen and pushed to the repository.
+Once the images are ready can create task definitions to be used for the services. Now we need to create a cluster and launch services inside this cluster.
+The task definitions we have created will be used to run tasks for the services. How a service will run entirely depend on the task definition.
